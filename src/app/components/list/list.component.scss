@@ -1,0 +1,56 @@
+mat-card {
+  margin-bottom: 10px;
+}
+.get-weather-button {
+  border: solid blue 1px;
+  color: blue;
+}
+.incremented {
+  color: red;
+}
+.incremented-card {
+  box-shadow: 0 0 3pt 2pt gray;
+}
+.delete-icon {
+  color: red;
+}
+
+.delete-button {
+  border: solid red 1px;
+  color: red;
+}
+.likes-count {
+  position: relative;
+  left: 18px;
+}
+
+.thumb-icon {
+  position: relative;
+  bottom: 4px;
+  left: 4px;
+}
+.city-country {
+  font-size: 16px;
+  padding-left: 8px;
+}
+.likes-number {
+  font-size: 20px;
+  position: relative;
+  top: 1px;
+}
+@media (max-width: 550px) {
+  .list-buttons {
+    width: 80px !important;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .hide-xs {
+    display: none;
+  }
+}
+
+@media (min-width: 551px) {
+  .hide-gt-xs {
+    display: none;
+  }
+}

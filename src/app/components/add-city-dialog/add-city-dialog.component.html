@@ -1,0 +1,8 @@
+<h2 mat-dialog-title>Add city</h2>
+<mat-dialog-content [formGroup]="form">
+  <p>Would you like to save <b>{{ city }}, {{ country }}</b> to the list?</p>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-raised-button (click)="close()">Close</button>
+  <button class="mat-primary" mat-raised-button (click)="save()">Save</button>
+</mat-dialog-actions>

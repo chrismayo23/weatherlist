@@ -1,0 +1,21 @@
+<mat-card class="mat-elevation-z3"  [ngClass]="incrementedId === item.openWeatherId ? 'incremented-card' : null" *ngFor="let item of citiesList">
+  <mat-card-content fxLayout fxLayoutAlign="space-around center">
+    <div class="city-country" fxFlex=25>{{ item.city }}, {{ item.country }}</div>
+    <div fxFlex=15 class="likes-count">
+      <span class="likes-number">{{ item.likes }}</span>
+      <button  class="thumb-icon" mat-icon-button (click)="incrementLikeCounter(item)">
+        <mat-icon [ngClass]="incrementedId === item.openWeatherId ? 'incremented' : null">thumb_up</mat-icon>
+      </button>
+    </div>
+    <div fxLayout fxLayoutAlign="space-around center" fxFlex=60>
+      <button class="get-weather-button list-buttons" mat-button (click)="getWeather(item)">
+        <span class="hide-gt-xs">Weather</span>
+        <span class="hide-xs">Get Weather</span>
+      </button>
+      <button class="delete-button list-buttons" mat-button (click)="deleteCityDialog(item)">
+        <span class="hide-gt-xs">Delete</span>
+        <span class="hide-xs">Delete City</span>
+      </button>
+    </div>
+  </mat-card-content>
+</mat-card>

@@ -1,0 +1,8 @@
+<h2 mat-dialog-title>Delete city</h2>
+<mat-dialog-content [formGroup]="form">
+  <p>Would you like to delete <b>{{ city }}, {{ country }}</b> from the list?</p>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-raised-button (click)="close()">Cancel</button>
+  <button class="mat-primary" mat-raised-button (click)="delete()">Delete</button>
+</mat-dialog-actions>

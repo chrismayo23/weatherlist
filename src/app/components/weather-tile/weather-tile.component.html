@@ -1,0 +1,42 @@
+<mat-card *ngIf="weather">
+  <mat-card-title>
+    {{ weather.name }}, {{ weather.sys.country }}
+    <button class="more-button" mat-icon-button [matMenuTriggerFor]="weatherMenu">
+      <mat-icon>more_vert</mat-icon>
+    </button>
+    <mat-menu #weatherMenu="matMenu">
+      <mat-radio-group fxLayout="column" (click)="$event.stopPropagation()" (change)="onTempChange($event)">
+        <mat-radio-button value="fahrenheit" checked>Fahrenheit</mat-radio-button>
+        <mat-radio-button value="celsius">Celsius</mat-radio-button>
+      </mat-radio-group>
+    </mat-menu>
+  </mat-card-title>
+  <mat-card-content class="weather-stats">
+    <div fxLayout>
+      <div fxFlex=65 class="temperature">{{ weather.main.temp | number: '1.1-1' }} &deg;{{ degrees }}</div>
+      <div class="icon"><img [src]="getIconUrl()"></div>
+    </div>
+    <div class="other-stats">
+      <div>{{ weather.weather[0].main }}</div>
+      <div>Humidity: {{ weather.main.humidity }}%</div>
+      <div>Pressure: {{ weather.main.pressure }} hPa</div>
+      <div>
+        Wind: {{ weather.wind.speed | number: '1.1-1' }} mph
+        <span *ngIf="weather.wind.deg"> at {{ weather.wind.deg }}&deg; {{ getWindDirection() }}</span>
+      </div>
+    </div>
+  </mat-card-content>
+  <mat-card-actions fxLayout>
+    <div fxFlex=40 class="like-div">
+      <button mat-icon-button (click)="incrementLikeCounter()">
+        <mat-icon [ngClass]="incremented ? 'incremented' : null">thumb_up</mat-icon>
+      </button>
+      <span class="likes">{{ likes }}</span>
+    </div>
+    <div fxFlex>
+      <button *ngIf="showSaveButton" mat-raised-button color="primary" (click)="saveToListDialog(weather)">
+        Save to List
+      </button>
+    </div>
+  </mat-card-actions>
+</mat-card>

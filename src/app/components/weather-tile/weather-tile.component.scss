@@ -1,0 +1,42 @@
+mat-card {
+  width: 300px;
+  margin-top: 20px;
+}
+
+mat-radio-button {
+  padding: 20px 20px;
+}
+
+.more-button {
+  float: right;
+  background-color: rgb(245, 245, 245);
+  position: relative;
+  bottom: 7px;
+}
+.temperature {
+  font-size: 40px;
+}
+
+.weather-stats {
+  padding-top: 15px;
+}
+
+.other-stats div {
+  padding-top: 6px;
+  font-size: 16px;
+}
+
+.incremented {
+  color: red;
+}
+
+.likes {
+  position: relative;
+  top: 5px;
+  font-size: 25px;
+}
+
+.like-div {
+  position: relative;
+  left: 20px;
+}

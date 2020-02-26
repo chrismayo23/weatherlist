@@ -1,0 +1,73 @@
+mat-toolbar {
+  background-color: rgb(59, 99, 231);
+  color: white;
+}
+.search-box {
+  position: relative;
+  border-radius: 2px;
+  height: 30px;
+  border: solid white 1px;
+  background-color: white;
+  width: 500px;
+  font-size: 14pt;
+  top: 2px;
+  padding-left: 8px;
+}
+.search-mobile {
+  float: right;
+}
+
+.site-title {
+  font-size: 24px;
+}
+.upper-search-button {
+  margin-left: 10px;
+}
+.center-row {
+  text-align: center;
+}
+.search-toolbar {
+  background-color: rgb(80, 80, 80);
+}
+.pad-search-box {
+  padding-left: 200px;
+}
+::placeholder {
+  color: gray;
+}
+.weather-map {
+  position: sticky;
+  top: 94px;
+  z-index: 1000;
+}
+.app-toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.content {
+  padding-top: 30px;
+}
+
+.list-content {
+  max-width: 700px;
+  min-width: 500px;
+}
+
+@media (max-width: 900px) {
+  .search-box {
+    width: 480px;
+  }
+  .pad-search-box {
+    padding-left: 80px;
+  }
+}
+@media (max-width: 760px) {
+  .search-box {
+    width: 380px;
+  }
+  .pad-search-box {
+    padding-left: 37px;
+  }
+}
